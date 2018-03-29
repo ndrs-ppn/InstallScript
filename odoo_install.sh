@@ -266,3 +266,14 @@ echo "Start Odoo service: sudo service $OE_CONFIG start"
 echo "Stop Odoo service: sudo service $OE_CONFIG stop"
 echo "Restart Odoo service: sudo service $OE_CONFIG restart"
 echo "-----------------------------------------------------------"
+
+#--------------------------------------------------
+# Adding ODOO theme
+#--------------------------------------------------
+echo -e "Install ODOO theme"
+sudo su $OE_USER -c "wget https://github.com/ndrs-ppn/InstallScript/raw/master/backend_theme.zip /odoo/"
+sudo su $OE_USER -c "unzip backend_theme.zip"
+sudo su $OE_USER -c "mv web_responsive /odoo/odoo-server/addons/"
+sudo su $OE_USER -c "mv backend_theme_v11 /odoo/odoo-server/addons/"
+sudo su $OE_USER -c "rm -rf backend_theme.zip"
+echo "-----------------------------------------------------------"
