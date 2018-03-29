@@ -63,7 +63,7 @@ sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 #--------------------------------------------------
 # Install Dependencies
 #--------------------------------------------------
-echo -e "\n--- Installing Unnzip --"
+echo -e "\n--- Installing Unzip --"
 sudo apt-get install unzip
 
 echo -e "\n--- Installing Python 3 + pip3 --"
